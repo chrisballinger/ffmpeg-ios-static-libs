@@ -63,6 +63,7 @@ enum {
 
 };
 
+#if FF_API_AVFILTERBUFFER
 /**
  * Add buffer data in picref to buffer_src.
  *
@@ -72,8 +73,10 @@ enum {
  * @return            >= 0 in case of success, a negative AVERROR code
  *                    in case of failure
  */
+attribute_deprecated
 int av_buffersrc_add_ref(AVFilterContext *buffer_src,
                          AVFilterBufferRef *picref, int flags);
+#endif
 
 /**
  * Get the number of failed requests.
@@ -138,7 +141,7 @@ int av_buffersrc_add_frame(AVFilterContext *ctx, AVFrame *frame);
  * Add a frame to the buffer source.
  *
  * By default, if the frame is reference-counted, this function will take
- * ownership of the reference(s) and reset the frame. This can be controled
+ * ownership of the reference(s) and reset the frame. This can be controlled
  * using the flags.
  *
  * If this function returns an error, the input frame is not touched.
