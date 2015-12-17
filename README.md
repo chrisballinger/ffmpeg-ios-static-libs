@@ -1,10 +1,8 @@
 ffmpeg-ios-static-libs
 ======================
 
-Precompiled static libs for FFmpeg, OpenSSL, and librtmp because Cocoapods can't properly handle C library dependencies.
+Precompiled static libs for FFmpeg because Cocoapods can't properly handle C library dependencies.
 
-* FFmpeg 2.2
-* librtmp HEAD (79459a2b43f41ac44a2ec001139bcb7b1b8f7497)
-* OpenSSL 1.0.1f
+* FFmpeg 2.8.3
 
-For the build scripts see: https://github.com/chrisballinger/ffmpeg-ios
+For the build scripts see: https://github.com/kewlbear/FFmpeg-iOS-build-script
